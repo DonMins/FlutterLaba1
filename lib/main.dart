@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -72,46 +73,280 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-      appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
-      ),
-      body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
-        child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Invoke "debug painting" (press "p" in the console, choose the
-          // "Toggle Debug Paint" action from the Flutter Inspector in Android
-          // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
-          // to see the wireframe for each widget.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
+        backgroundColor: Colors.white,
+        body: ListView(children: <Widget>[
+          Padding(
+              padding: EdgeInsets.only(top: 15.0, left: 10.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  Container(
+                      width: 400,
+                      child: Row(children: <Widget>[
+                        IconButton(
+                          icon: Icon(Icons.short_text),
+                          color: Colors.black,
+                          onPressed: () {},
+                        ),
+                        IconButton(
+                          icon: Icon(Icons.notifications_none),
+                          padding: EdgeInsets.only(left: 300.0),
+                          color: Colors.black,
+                          onPressed: () {},
+                        )
+                      ]))
+                ],
+              )),
+          Padding(
+              padding: EdgeInsets.only(left: 22.0, top: 10.0),
+              child: Row(children: <Widget>[
+                Text("Todays Surveys",
+                    style: TextStyle(
+                        fontFamily: 'Montserrat',
+                        fontWeight: FontWeight.bold,
+                        fontSize: 29.0))
+              ])),
+          Padding(
+              padding: EdgeInsets.only(left: 22.0, top: 7.0),
+              child: Row(children: <Widget>[
+                Text(
+                  "5 upcoming surveys",
+                  style: TextStyle(color: Colors.grey),
+                )
+              ])),
+          Container(
+              padding: EdgeInsets.only(top: 15.0, left: 22.0),
+              height: 70,
+              child: Row(children: <Widget>[
+                Container(
+                  width: 170.0,
+                  child: OutlineButton(
+                    padding: EdgeInsets.only(left: 10.0),
+                    child: Center(
+                        child: Container(
+                            child: Row(children: <Widget>[
+                      Container(
+                        height: 30.0,
+                        width: 30.0,
+                        child: new Icon(Icons.gesture, color: Colors.white),
+                        decoration: new BoxDecoration(
+                            color: Colors.blueAccent,
+                            borderRadius: new BorderRadius.circular(5.0)),
+                      ),
+                      Padding(padding: EdgeInsets.only(left: 10.0)),
+                      Text("Science",
+                          style: TextStyle(
+                            color: Colors.black,
+                          ))
+                    ]))),
+                    onPressed: null,
+                    shape: new RoundedRectangleBorder(
+                        borderRadius: new BorderRadius.circular(10.0)),
+                  ),
+                ),
+                Padding(padding: EdgeInsets.only(left: 20.0)),
+                Container(
+                    width: 170.0,
+                    height: 70.0,
+                    child: OutlineButton(
+                        padding: EdgeInsets.only(left: 5.0),
+                        child: Center(
+                            child: Container(
+                                child: Row(children: <Widget>[
+                          Container(
+                            height: 30.0,
+                            width: 30.0,
+                            child: new Icon(Icons.scanner, color: Colors.white),
+                            decoration: new BoxDecoration(
+                                color: Colors.pinkAccent,
+                                borderRadius: new BorderRadius.circular(5.0)),
+                          ),
+                          Padding(padding: EdgeInsets.only(left: 10.0)),
+                          Text(
+                            "Social",
+                            style: TextStyle(color: Colors.black),
+                          )
+                        ]))),
+                        onPressed: null,
+                        shape: new RoundedRectangleBorder(
+                            borderRadius: new BorderRadius.circular(10.0))))
+              ])),
+          Container(
+              padding: EdgeInsets.only(top: 15.0, left: 22.0),
+              height: 70,
+              child: Row(children: <Widget>[
+                Container(
+                  width: 170.0,
+                  child: OutlineButton(
+                    padding: EdgeInsets.only(left: 10.0),
+                    child: Center(
+                        child: Container(
+                            child: Row(children: <Widget>[
+                      Container(
+                        height: 30.0,
+                        width: 30.0,
+                        child: new Icon(Icons.terrain, color: Colors.white),
+                        decoration: new BoxDecoration(
+                            color: Colors.lightGreenAccent,
+                            borderRadius: new BorderRadius.circular(5.0)),
+                      ),
+                      Padding(padding: EdgeInsets.only(left: 10.0)),
+                      Text("Teach",
+                          style: TextStyle(
+                            color: Colors.black,
+                          ))
+                    ]))),
+                    onPressed: null,
+                    shape: new RoundedRectangleBorder(
+                        borderRadius: new BorderRadius.circular(10.0)),
+                  ),
+                ),
+                Padding(padding: EdgeInsets.only(left: 20.0)),
+                Container(
+                    width: 170.0,
+                    height: 70.0,
+                    child: OutlineButton(
+                        padding: EdgeInsets.only(left: 5.0),
+                        child: Center(
+                            child: Container(
+                                child: Row(children: <Widget>[
+                          Container(
+                            height: 30.0,
+                            width: 30.0,
+                            child: new Icon(Icons.gavel, color: Colors.white),
+                            decoration: new BoxDecoration(
+                                color: Colors.blueAccent,
+                                borderRadius: new BorderRadius.circular(5.0)),
+                          ),
+                          Padding(padding: EdgeInsets.only(left: 10.0)),
+                          Text(
+                            "Gaming",
+                            style: TextStyle(color: Colors.black),
+                          )
+                        ]))),
+                        onPressed: null,
+                        shape: new RoundedRectangleBorder(
+                            borderRadius: new BorderRadius.circular(10.0))))
+              ])),
+          Container(
+              padding: EdgeInsets.only(top: 15.0, left: 22.0),
+              height: 70,
+              child: Row(children: <Widget>[
+                Container(
+                  width: 170.0,
+                  child: OutlineButton(
+                    padding: EdgeInsets.only(left: 10.0),
+                    child: Center(
+                        child: Container(
+                            child: Row(children: <Widget>[
+                      Container(
+                        height: 30.0,
+                        width: 30.0,
+                        child: new Icon(Icons.history, color: Colors.white),
+                        decoration: new BoxDecoration(
+                            color: Colors.pinkAccent,
+                            borderRadius: new BorderRadius.circular(5.0)),
+                      ),
+                      Padding(padding: EdgeInsets.only(left: 10.0)),
+                      Text("History",
+                          style: TextStyle(
+                            color: Colors.black,
+                          ))
+                    ]))),
+                    onPressed: null,
+                    shape: new RoundedRectangleBorder(
+                        borderRadius: new BorderRadius.circular(10.0)),
+                  ),
+                ),
+                Padding(padding: EdgeInsets.only(left: 20.0)),
+                Container(
+                    width: 170.0,
+                    height: 70.0,
+                    child: OutlineButton(
+                        padding: EdgeInsets.only(left: 5.0),
+                        child: Center(
+                            child: Container(
+                                child: Row(children: <Widget>[
+                          Container(
+                            height: 30.0,
+                            width: 30.0,
+                            child: new Icon(Icons.account_balance,
+                                color: Colors.white),
+                            decoration: new BoxDecoration(
+                                color: Colors.lightGreenAccent,
+                                borderRadius: new BorderRadius.circular(5.0)),
+                          ),
+                          Padding(padding: EdgeInsets.only(left: 10.0)),
+                          Text(
+                            "Analytics",
+                            style: TextStyle(color: Colors.black),
+                          )
+                        ]))),
+                        onPressed: null,
+                        shape: new RoundedRectangleBorder(
+                            borderRadius: new BorderRadius.circular(10.0))))
+              ])),
+          Padding(
+              padding: EdgeInsets.only(left: 22.0, top: 30.0),
+              child: Row(children: <Widget>[
+                Text("All Surveys",
+                    style: TextStyle(
+                        fontFamily: 'Montserrat',
+                        fontWeight: FontWeight.bold,
+                        fontSize: 29.0))
+              ])),
+          Container(
+            height: MediaQuery.of(context).size.height - 300,
+            child: ListView(
+              children: [
+                _getIconSurveys("icon/1.jpg", 'Food Survey'),
+                _getIconSurveys("icon/2.jpg", 'Business Survey'),
+                _getIconSurveys("icon/3.jpg", 'Travel Survey'),
+              ],
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
-    );
+          )
+        ]));
+  }
+
+  Widget _getIconSurveys(String imgPath, String name) {
+    return Padding(
+        padding: EdgeInsets.only(left: 22, right: 10, top: 10),
+        child: InkWell(
+            onTap: () {},
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Container(
+
+                  child: Row(
+                    children: [
+                      Hero(
+                        tag: imgPath,
+                        child: Image(
+                          image: AssetImage(imgPath),
+                          fit: BoxFit.cover,
+                          height: 50.0,
+                          width: 50.0,
+                        ),
+                      ),
+                      SizedBox(width: 10),
+
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            name,
+                            style: TextStyle(
+                              fontFamily: 'Montserrat',
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                )
+              ],
+            )));
   }
 }
